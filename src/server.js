@@ -29,4 +29,7 @@ app.get('/api/break/:title', async (req, res) => {
     }
 });
 
-app.listen(3000, () => console.log("Break4th is live on port 3000"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Break4th is live on port ${PORT}`);
+});
